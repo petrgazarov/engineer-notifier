@@ -15,11 +15,13 @@ ADD Gemfile /app/
 ADD Gemfile.lock /app/
 WORKDIR /app
 RUN bundle install
+# RUN apt-get update
+# RUN apt-get install nodejs
 
 ADD . /app
-RUN bundle exec rake assets:precompile
+# RUN bundle exec rake assets:precompile
 
-# ENV PORT 3000
-# EXPOSE 3000
+ENV PORT 54024
+EXPOSE 54024
 
-RUN bundle exec ruby app/models/engineer_notifier.rb
+# RUN bundle exec ruby app/models/engineer_notifier.rb
