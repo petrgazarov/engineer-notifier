@@ -23,5 +23,3 @@ ADD . /app
 
 ENV PORT 9292
 EXPOSE 9292
-
-# RUN bundle exec ruby app/models/engineer_notifier.rb
