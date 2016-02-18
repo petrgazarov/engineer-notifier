@@ -21,7 +21,7 @@ RUN bundle install
 ADD . /app
 # RUN bundle exec rake assets:precompile
 
-ENV PORT 54024
-EXPOSE 54024
+ENV PORT 9292
+EXPOSE 9292
 
 # RUN bundle exec ruby app/models/engineer_notifier.rb

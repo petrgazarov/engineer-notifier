@@ -3,10 +3,10 @@ require 'json'
 
 class EngineerNotifier < SlackRubyBot::Bot
   MENTIONS = JSON.parse ENV['MENTIONS']
-  CHANNELS = JSON.parse ENV['CHANNELS']
+  CHANNEL_IDS = JSON.parse ENV['CHANNEL_IDS']
 
   match /.*/ do |client, data, match|
-    unless valid_channel?(data.channel)
+    if valid_channel?(data.channel)
       data[:attachments].try(:each) do |attachment|
         MENTIONS.each do |mention|
           if attachment.text.include?(mention)
@@ -21,9 +21,7 @@ class EngineerNotifier < SlackRubyBot::Bot
     client.say(channel: data.channel, text: "^ #{mention}")
   end
 
-  def self.valid_channel?(channel)
-    CHANNELS.include?(channel)
+  def self.valid_channel?(channel_id)
+    CHANNEL_IDS.include?(channel_id)
   end
 end
-
-EngineerNotifier.run
