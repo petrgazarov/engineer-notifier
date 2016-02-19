@@ -8,14 +8,14 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'dotenv'
 Dotenv.load
 
-require 'engineer_notifier'
+require 'lib/engineer_notifier'
 require 'web'
 
 Thread.abort_on_exception = true
 
 Thread.new do
   begin
-    EngineerNotifier.run
+    SlackBot::EngineerNotifier.run
   rescue Exception => e
     STDERR.puts "ERROR: #{e}"
     STDERR.puts e.backtrace

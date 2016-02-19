@@ -6,20 +6,14 @@ RUN apt-get update && apt-get -y install build-essential
 # System prerequisites
 RUN apt-get update && apt-get -y install libpq-dev
 
-# If you require additional OS dependencies, install them here:
-# RUN apt-get update && apt-get -y install imagemagick nodejs
-
 # Add Gemfile before rest of repo, for Docker caching purposes
 # See http://ilikestuffblog.com/2014/01/06/
-ADD Gemfile /app/
-ADD Gemfile.lock /app/
-WORKDIR /app
+ADD Gemfile /lib/
+ADD Gemfile.lock /lib/
+WORKDIR /lib
 RUN bundle install
-# RUN apt-get update
-# RUN apt-get install nodejs
 
-ADD . /app
-# RUN bundle exec rake assets:precompile
+ADD . /lib
 
 ENV PORT 9292
 EXPOSE 9292

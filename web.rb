@@ -2,6 +2,6 @@ require 'sinatra/base'
 
 class Web < Sinatra::Base
   get '/' do
-    'Math is good for you.'
+    'Hello world!'
   end
 end
