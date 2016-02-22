@@ -14,6 +14,8 @@ module SlackBot
 
       if valid_channel?(data.channel)
         data[:attachments].try(:each) do |attachment|
+          next unless attachment.text
+
           MENTIONS.each do |mention|
             if attachment.text.include?(mention)
               echo_mention(data: data, mention: mention, client: client)
