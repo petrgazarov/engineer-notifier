@@ -19,3 +19,12 @@ Environment variables are:
 
 * CHANNEL_IDS
   * Array of channel ids
+
+### Credits
+
+[slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
+
+### License
+
+MIT
+
