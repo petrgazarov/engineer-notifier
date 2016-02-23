@@ -16,7 +16,7 @@ module SlackBot
           next unless attachment.text
 
           MENTIONS_TO_HANDLES.each do |mention, handle|
-            if attachment.text.include?(mention)
+            if attachment.text.split(' ').include?(mention)
               post_notification(data: data, handle: handle, client: client)
             end
           end
