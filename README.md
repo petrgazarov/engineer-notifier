@@ -9,7 +9,7 @@ Slack does not notify you when you or someone in your team is mentioned in the c
 ### Solution
 This bot will repost to channel mentioning the appropriate party and triggering the notification.
 
-Environment variables are:
+### Environment variables
 
 * SLACK_API_TOKEN
   * Bot token issued by Slack
@@ -21,4 +21,4 @@ Environment variables are:
 * CHANNEL_IDS
   * Array of channel ids
 
-Built on top of [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
+#### Built on top of the awesome [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
