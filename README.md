@@ -7,24 +7,18 @@ When a comment is posted on Github PR, you get a post to your slack channel by G
 Slack does not notify you when you or someone in your team is mentioned in the comment exlicitly, e.g. '@your_gh_handle CR please?', because the mention comes inside `attachments` attribute of incoming JSON.
 
 ### Solution
-This bot will repost the mention triggering the notification.
+This bot will repost to channel mentioning the appropriate party and triggering the notification.
 
 Environment variables are:
 
 * SLACK_API_TOKEN
   * Bot token issued by Slack
 
-* MENTIONS
-  * Array of mentions that trigger the bot
+* MENTIONS_TO_HANDLES
+  * Hash where keys are mentions and values are slack handles.
+  * Note that slack handles need to be formatted for bots, see more here: https://api.slack.com/docs/formatting
 
 * CHANNEL_IDS
   * Array of channel ids
 
-### Credits
-
-[slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
-
-### License
-
-MIT
-
+Built on top of [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
