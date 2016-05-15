@@ -26,7 +26,7 @@ This bot will repost to channel mentioning the appropriate party and triggering 
 
 * CHANNEL_IDS
   * Array of channel ids, obtainable [here](https://api.slack.com/methods/channels.list)
-  * Set it same way as the above hash `'["el1", "el2"]'`
+  * Set it same way as the above hash, e.g. `'["DFJDH3H2", "NSBA2FB3"]'`
 
 * BOT_EMOJI
   * `:dragon_face:` by default
