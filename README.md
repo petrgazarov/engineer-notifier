@@ -9,6 +9,8 @@ Slack does not notify you when you or someone in your team is mentioned in the c
 ### Solution
 This bot will repost to channel mentioning the appropriate party and triggering slack notification.
 
+![Slack screenshot](./slack-screenshot.png "Engineer-notifier slack screenshot")
+
 ### Environment variables
 
 * SLACK_API_TOKEN
@@ -20,10 +22,14 @@ This bot will repost to channel mentioning the appropriate party and triggering 
     * Slack user handle example: `@U0EXLJ7RM`
     * Slack subteam handle example: `!subteam^S0DPXCWRD`
     * [See more on slack formatting](https://api.slack.com/docs/formatting)
-  * When setting this environment variable, hash should be a string with single quotes outside and double quotes inside, e.g. `'{"@kelly": "@SDFHJ23G", "@brad": "@DFD3H4M"}`
+  * When setting this environment variable, hash should be a string with single quotes outside and double quotes inside, e.g. `'{"@kelly": "@SDFHJ23G", "@brad": "@DFD3H4M"}'`
 
 * CHANNEL_IDS
   * Array of channel ids, obtainable [here](https://api.slack.com/methods/channels.list)
+  * Set it same way as the above hash `'["el1", "el2"]'`
+
+* BOT_EMOJI
+  * `:dragon_face:` by default
 
 
 #### Built on top of the awesome [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
