@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activesupport (4.2.5)
+    activesupport (4.2.6)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -9,6 +9,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     coderay (1.1.0)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     dotenv (2.0.2)
     eventmachine (1.0.9.1)
@@ -31,7 +33,7 @@ GEM
       faraday_middleware-parse_oj (~> 0.3)
       launchy (~> 2.4)
     gli (2.13.4)
-    hashie (3.4.3)
+    hashie (3.4.4)
     i18n (0.7.0)
     json (1.8.3)
     launchy (2.4.3)
@@ -39,12 +41,13 @@ GEM
     method_source (0.8.2)
     minitest (5.8.4)
     multipart-post (2.0.0)
-    oj (2.14.4)
+    oj (2.15.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    puma (2.15.3)
+    puma (2.9.2)
+      rack (>= 1.1, < 2.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -63,17 +66,18 @@ GEM
     rspec-mocks (3.1.3)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    safe_yaml (1.0.4)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
-    slack-ruby-bot (0.6.2)
+    slack-ruby-bot (0.8.0)
       activesupport
-      faye-websocket
       giphy (~> 2.0.2)
       hashie
       slack-ruby-client (>= 0.6.0)
-    slack-ruby-client (0.6.0)
+    slack-ruby-client (0.7.3)
+      activesupport
       faraday
       faraday_middleware
       gli
@@ -86,6 +90,10 @@ GEM
     tilt (2.0.2)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    vcr (2.9.3)
+    webmock (1.21.0)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -94,15 +102,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dotenv
+  dotenv (~> 2.0.1)
+  faye-websocket
   foreman
   pry
-  puma
+  puma (~> 2.9.2)
   rack-test
   rake
   rspec
   sinatra
-  slack-ruby-bot
+  slack-ruby-bot (~> 0.8.0)
+  vcr
+  webmock
 
 BUNDLED WITH
    1.11.2

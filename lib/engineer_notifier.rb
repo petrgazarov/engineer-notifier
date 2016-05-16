@@ -24,6 +24,8 @@ module SlackBot
       end
     end
 
+    private
+
     def self.post_notification(data:, handle:, client:)
       client.say(channel: data.channel, text: "^ <#{handle}>")
     end
@@ -37,7 +39,7 @@ module SlackBot
     end
 
     def self.post_emoji_reaction(data:, client:)
-      client.say(channel: data.channel, text: "#{BOT_EMOJI}:heart:")
+      client.say(channel: data.channel, text: ":heart:")
     end
   end
 end
