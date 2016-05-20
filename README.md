@@ -1,5 +1,7 @@
 # Engineer Notifier! :dragon_face:
 
+[![Build Status](https://semaphoreci.com/api/v1/petrgazarov/engineer-notifier/branches/master/badge.svg)](https://semaphoreci.com/petrgazarov/engineer-notifier)
+
 A hack to improve Github-Slack notifications. 
 
 ### Problem
