@@ -34,4 +34,9 @@ This bot will repost to channel mentioning the appropriate party and triggering 
   * `:dragon_face:` by default
 
 
+### License
+
+MIT
+
+
 #### Built on top of the awesome [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
