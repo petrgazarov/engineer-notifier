@@ -32,6 +32,9 @@ This bot will repost to channel mentioning the appropriate party and triggering 
 
 * BOT_EMOJI
   * `:dragon_face:` by default
+  
+### Contributing
+Contributions are welcome. Please check Issues for existing bugs or feature requests or open a new issue before sending a PR.
 
 
 ### License
