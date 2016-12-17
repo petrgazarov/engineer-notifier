@@ -1,0 +1,31 @@
+{
+  "name": "Engineer Notifier",
+  "description": "A hack to improve Github-Slack notifications",
+  "keywords": [
+    "Github",
+    "Slack",
+    "Notification",
+    "Bot"
+  ],
+  "website": "https://github.com/petrgazarov/engineer-notifier",
+  "repository": "https://github.com/petrgazarov/engineer-notifier",
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby.git"
+    }
+  ],
+  "env": {
+    "SLACK_API_TOKEN": {
+      "description": "Slack secret token, obtainable at https://api.slack.com/docs/oauth-test-tokens"
+    },
+    "MENTIONS_TO_HANDLES": {
+      "description": "Hash where keys are mentions on github and values are slack handles"
+    },
+    "CHANNEL_IDS": {
+      "description": "Array of valid channel ids, obtainable here: https://api.slack.com/methods/channels.list"
+    },
+    "BOT_EMOJI": {
+      "description": "Slack emoji for bot"
+    }
+  }
+}

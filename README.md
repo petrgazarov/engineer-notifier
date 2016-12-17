@@ -16,7 +16,7 @@ This bot will repost to channel mentioning the appropriate party and triggering 
 ### Environment variables
 
 * SLACK_API_TOKEN
-  * Bot token issued by Slack
+  * Bot token issued by Slack, obtainable [here](https://api.slack.com/docs/oauth-test-tokens)
 
 * MENTIONS_TO_HANDLES
   * Hash where keys are mentions on github and values are slack handles.
@@ -27,19 +27,13 @@ This bot will repost to channel mentioning the appropriate party and triggering 
   * When setting this environment variable, hash should be a string with single quotes outside and double quotes inside, e.g. `'{"@kelly": "@SDFHJ23G", "@brad": "@DFD3H4M"}'`
 
 * CHANNEL_IDS
-  * Array of channel ids, obtainable [here](https://api.slack.com/methods/channels.list)
+  * Array of valid channel ids, obtainable [here](https://api.slack.com/methods/channels.list)
   * Set it same way as the above hash, e.g. `'["DFJDH3H2", "NSBA2FB3"]'`
 
 * BOT_EMOJI
   * `:dragon_face:` by default
   
 ### Contributing
-Contributions are welcome. Please check [Issues](https://github.com/petrgazarov/engineer-notifier/issues) for existing bugs/feature requests.
-
-
-### License
-
-MIT
-
+Contributions are welcome. Please check [Issues](https://github.com/petrgazarov/engineer-notifier/issues) for existing bugs/feature requests or add a new issue.
 
 #### Built on top of the awesome [slack-ruby-bot](https://github.com/dblock/slack-ruby-bot)
