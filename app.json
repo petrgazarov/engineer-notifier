@@ -25,7 +25,8 @@
       "description": "Array of valid channel ids, obtainable here: https://api.slack.com/methods/channels.list"
     },
     "BOT_EMOJI": {
-      "description": "Slack emoji for bot"
+      "description": "Slack emoji for bot",
+      "value": ":dragon_face:"
     }
   }
 }

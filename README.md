@@ -4,6 +4,8 @@
 
 A hack to improve Github-Slack notifications. 
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ### Problem
 When a comment is posted on Github PR, you get a post to your slack channel by Github bot if you installed the integration.
 Slack does not notify you when you or someone in your team is mentioned in the comment exlicitly, e.g. `@your_gh_handle CR please?`, because the mention comes inside `attachments` attribute of incoming JSON.
